@@ -32,7 +32,8 @@ var apiRoutes = function apiRoutes(app) {
       range: range,
       resource: {
         values: [req.body]
-      }
+      },
+      valueInputOption: 'USER_ENTERED'
     }, function (err, response) {
       if (err) {
         console.log('api returned an error', err);
