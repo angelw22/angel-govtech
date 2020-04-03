@@ -16,7 +16,7 @@ var apiRoutes = function apiRoutes(app) {
   app.post('/upload', function (req, res, next) {
     console.log('received webhook', req.body);
     var spreadsheetId = '1tR2DjNMWSZcZVo-R2AtyBANay5Giq25KiltNVSrXc9w';
-    var range = 'Sheet1!A2:E1';
+    var range = 'Sheet1!A:J';
     var jwtClient = new google.auth.JWT(privatekey.client_email, null, privatekey.private_key, ['https://www.googleapis.com/auth/spreadsheets']);
     jwtClient.authorize(function (err, tokens) {
       if (err) {

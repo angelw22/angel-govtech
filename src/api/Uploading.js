@@ -6,7 +6,7 @@ const apiRoutes = app => {
   app.post('/upload', (req, res, next) => {
     console.log( 'received webhook', req.body);
     const spreadsheetId = '1tR2DjNMWSZcZVo-R2AtyBANay5Giq25KiltNVSrXc9w';
-    const range = 'Sheet1!A2:E1'
+    const range = 'Sheet1!B:J'
     let jwtClient = new google.auth.JWT(
       privatekey.client_email, 
       null, 
